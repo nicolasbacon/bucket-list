@@ -1,0 +1,14 @@
+{% extends 'default/layout.html.twig' %}
+
+{% block main %}
+    <div class="connect">
+        <form method="post">
+            <label for="username">Username : </label>
+            <input type="text" name="_username" id="username">
+            <label for="password">Password : </label>
+            <input type="password" name="_password" id="password">
+            <button type="submit">Connected</button>
+        </form>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+security:
+
+    providers:
+        ou_db_provider:
+            entity:
+                class: App\Entity\User
+                property: username
+
+    firewalls:
+        main:
+            pattern: ^/
+            provider: ou_db_provider
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+            logout_on_user_change: true
+            logout:
+                path: logout
+                target: main_home
+
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
+    access_control:
+        - { path: /}
+        - { path: ^/admin, roles: ROLE_ADMIN }

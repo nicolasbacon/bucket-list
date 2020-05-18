@@ -1,0 +1,9 @@
+{% extends 'default/layout.html.twig' %}
+{% block title %}Detail !{% endblock %}
+{% block main %}
+    <div>
+        <h3>Idée : {{ idea.title }}</h3>
+        <p>{{ idea.description }}</p>
+        <div style="font-size: x-small">{{ idea.author }} - {{ idea.dateCreated | date('d/m/yy') }}</div>
+    </div>
+{% endblock %}

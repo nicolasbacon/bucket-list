@@ -1,0 +1,60 @@
+body>*{
+    margin: 10px 10px 10px 10px;
+    font-family: Nunito, sans-serif;
+}
+
+header{
+    display: grid;
+    background-color: red;
+}
+header>img{
+    grid-column: 1/2;
+    display: block;
+    margin: auto 10px auto auto;
+}
+header>h1{
+    grid-column: 2/2;
+}
+
+main{
+    display: grid;
+}
+
+nav{
+    background-color: blue;
+    width: 150px;
+    min-height: 400px;
+    height: auto;
+    grid-column: 1/2;
+}
+
+main>div{
+    grid-column: 2/2;
+    margin: 10px 10px 10px 10px;
+}
+
+footer{
+    background-color: green;
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+
+.flash {
+    padding: 10px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.flash-success {
+    background-color: green;
+}
+
+.flash-error {
+    background-color: red;
+}
+
+.connect {
+
+}

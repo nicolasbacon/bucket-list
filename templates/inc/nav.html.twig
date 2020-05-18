@@ -1,0 +1,17 @@
+<nav>
+    <ul>
+        <li><a href="{{ path('main_home') }}">Accueil</a></li>
+        <li><a href="{{ path('idea_list') }}">Liste des idées</a></li>
+        <li><a href="{{ path('main_about') }}">About us</a></li>
+
+        <li>Profil</li>
+        {% if is_granted('IS_AUTHENTICATED_REMEMBERED')%}
+            <li><a href="{{ path('idea_add') }}">Ajouter une idée</a></li>
+            <li><a href="{{ path('logout') }}">Logout</a></li>
+            <li>Hello {{ app.user.username }} !</li>
+        {% else %}
+            <li><a href="{{ path('login') }}">Login</a></li>
+            <li><a href="{{ path('register') }}">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>

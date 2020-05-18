@@ -1,0 +1,14 @@
+{% extends 'default/layout.html.twig' %}
+{% block title %}Liste !{% endblock %}
+{% block main %}
+    <div>
+        <h3>Liste des idées :</h3>
+        <ul>
+            {% for idea in ideas %}
+            <li>
+                <a href="{{ path('idea_detail',{'id':idea.id}) }}">{{ idea.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
